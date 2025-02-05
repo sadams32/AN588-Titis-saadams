@@ -51,6 +51,7 @@ dpois(0, 15) # P(calls = 0)
 ## Question 3
 
 *What is the probability that she will hear exactly 3 calls in a session?*
+
 ```{r}
 dpois(3, 15)
 ```
@@ -58,6 +59,7 @@ dpois(3, 15)
 ## Question 4
 
 *Plot the relevant Poisson mass function over the values in range 0 ≤ x ≤ 30.*
+
 ```{r}
 barplot(dpois(x=0:30, lambda=15), ylim=c(0,0.15), space=0, names.arg=0:30, col = "purple", ylab="P(X=x)", xlab="# of Calls")
 ```
