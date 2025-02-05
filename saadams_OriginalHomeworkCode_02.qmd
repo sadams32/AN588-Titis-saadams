@@ -79,7 +79,7 @@ summary(simulation)
 
 *Plot the simulated results using hist() and use xlim() to set the horizontal limits to be from 0 to 30.*
 ```{r}
-hist(simulation, breaks = seq(0,30, by = 1), xlim = c(0,30), xlab = "# of Calls", ylab = "Frequency", col = "pink", main = "Histogram of Titi Call Simulution")
+hist(simulation, breaks = seq(0.5,30.5, by = 1), xlim = c(0,30), xlab = "# of Calls", ylab = "Frequency", col = "pink", main = "Histogram of Titi Call Simulution")
 ```
 
 ## Question 7
