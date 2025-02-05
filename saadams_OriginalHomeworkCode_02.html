@@ -112,7 +112,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<p><img src="titimonkey.png" class="img-fluid"></p>
+<p><img src="https://th-thumbnailer.cdn-si-edu.com/DkvvxtE1NdSEWQ7jyjNnpWMSnVc=/fit-in/1600x0/https://tf-cmsv2-smithsonianmag-media.s3.amazonaws.com/filer/f0/41/f041ccf6-5ea8-4e08-8d47-4155e58c3886/42-58955931.jpg" class="img-fluid"></p>
 <section id="the-scenario" class="level2">
 <h2 class="anchored" data-anchor-id="the-scenario">The Scenario</h2>
 <p>Every Saturday morning, at the same time, a primatologist goes and sits in the forest to listen for titi monkey calls, counting the number of calls they hear in a 2 hour window from 5am to 7am. Based on previous knowledge, she believes that the mean number of calls she will hear in that time is exactly 15. Let X represent the appropriate Poisson random variable of the number of calls heard in each monitoring session.</p>
@@ -142,7 +142,7 @@ simulate n random variables
 <h2 class="anchored" data-anchor-id="question-1">Question 1</h2>
 <p><em>What is the probability that she will hear more than 8 calls during any given session?</em></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span> <span class="sc">-</span> <span class="fu">ppois</span>(<span class="dv">7</span>, <span class="dv">15</span>) <span class="co"># P(calls &gt;= 8) = 1 - probability(calls &lt; 8)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span> <span class="sc">-</span> <span class="fu">ppois</span>(<span class="dv">7</span>, <span class="dv">15</span>) <span class="co"># P(calls &gt;= 8) = 1 - P(calls &lt; 8)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 0.9819978</code></pre>
 </div>
