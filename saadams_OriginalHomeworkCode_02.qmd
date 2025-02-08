@@ -19,7 +19,8 @@ Every Saturday morning, at the same time, a primatologist goes and sits in the f
 ## Notes
 
 **Lambda**
-: the parameter of the distribution
+
+:   the parameter of the distribution
 
 **ppois(q, lambda)**
 
@@ -29,8 +30,9 @@ Every Saturday morning, at the same time, a primatologist goes and sits in the f
 
 :   probability of getting a value = x given lambda
 
-**rpois(n, lambsa)**
-: simulate n random variables
+**rpois(n, lambda)**
+
+:   simulate n random variables
 
 ## Question 1
 
@@ -78,6 +80,7 @@ summary(simulation)
 ## Question 6
 
 *Plot the simulated results using hist() and use xlim() to set the horizontal limits to be from 0 to 30.*
+
 ```{r}
 hist(simulation, breaks = seq(0.5,30.5, by = 1), xlim = c(0,30), xlab = "# of Calls", ylab = "Frequency", col = "pink", main = "Histogram of Titi Call Simulution")
 ```
@@ -88,11 +91,14 @@ hist(simulation, breaks = seq(0.5,30.5, by = 1), xlim = c(0,30), xlab = "# of Ca
 
 The shape of the histogram does not follow a normal distribution as closely as the probability mass function. The histogram has two distinct peaks while the probability mass function has one peak around 14-15 calls.
 
-
 # Challenges
 
 (1) I struggled intially to understand the difference of when to use ppois versus dpois. I wrote notes at the top about what I did - I hope it makes sense!
 
-(2) I wasn't sure how to best format the histogram - I initially stuggled to position the bars the way I did and am not sure if I did it correctly.
+(2) I wasn't sure how to best format the histogram - I initially struggled to position the bars the way I did and am not sure if I did it correctly.
 
 (3) I'm still a little bit confused about what a Poisson distribution is. I was able to figure how to handle it by doing the modules for this coming week and reading through the textbooks but I'm still a little confused.
+
+(4) I don't know if using the barplot() function for question 6 was correct or not.
+
+(5) I don't know how to tell if the probability answers actually make sense in their contexts for those first few questions.
