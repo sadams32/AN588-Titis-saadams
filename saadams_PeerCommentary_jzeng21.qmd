@@ -1,0 +1,104 @@
+---
+title: "Homework 2: Titis in the Mist"
+format: html
+editor: visual
+theme: "cayman"
+toc: true
+toc-depth: 5
+code-block-bg: true
+code-block-border-left: "blue"
+highlight-style: "gruvbox"
+---
+
+![](https://th-thumbnailer.cdn-si-edu.com/DkvvxtE1NdSEWQ7jyjNnpWMSnVc=/fit-in/1600x0/https://tf-cmsv2-smithsonianmag-media.s3.amazonaws.com/filer/f0/41/f041ccf6-5ea8-4e08-8d47-4155e58c3886/42-58955931.jpg)
+
+## Scenario
+
+Every Saturday morning, at the same time, a primatologist goes and sits in the forest to listen for titi monkey calls, counting the number of calls they hear in a 2 hour window from 5am to 7am. Based on previous knowledge, she believes that the mean number of calls she will hear in that time is exactly 15. Let X represent the appropriate Poisson random variable of the number of calls heard in each monitoring session.
+
+## Notes 
+
+**Lambda**
+
+:   the parameter of the distribution
+
+**ppois(q, lambda)**
+
+:   probability of getting values \<= q given lambda
+
+**dpois(x, lambda)**
+
+:   probability of getting a value = x given lambda
+
+**rpois(n, lambda)**
+
+:   simulate n random variables
+
+## Question 1
+
+*What is the probability that she will hear more than 8 calls during any given session?*
+
+```{r}
+1 - ppois(7, 15) # P(calls >= 8) = 1 - P(calls < 8) #Jason- I want to first say I love your notes and picture section above I think I am going to take inspiration on your note section and also make a note section of my own in my next homework! I think it really helps with going back to recall what each function actually does! I did put 8 instead of 7 here.
+```
+
+## Question 2
+
+*What is the probability that she will hear no calls in a session?*
+
+```{r}
+dpois(0, 15) # P(calls = 0) # Similar but I did use ppois here instead of dpois but I think both works? Maybe you are right then me
+```
+
+## Question 3
+
+*What is the probability that she will hear exactly 3 calls in a session?*
+
+```{r}
+dpois(3, 15)
+```
+
+## Question 4
+
+*Plot the relevant Poisson mass function over the values in range 0 ≤ x ≤ 30.*
+
+```{r}
+barplot(dpois(x=0:30, lambda=15), ylim=c(0,0.15), space=0, names.arg=0:30, col = "purple", ylab="P(X=x)", xlab="# of Calls") #Nice simple bar plot!
+```
+
+## Question 5
+
+*Simulate 104 results from this distribution (i.e., 2 years of Saturday monitoring sessions).*
+
+```{r}
+set.seed(1) # seed makes sure same random numbers will be generated 
+simulation <- rpois(104, 15) # simulation with 104 random samples
+simulation # print simulation results 
+summary(simulation)  #Nice overall and nice set.seed usage
+```
+
+## Question 6
+
+*Plot the simulated results using hist() and use xlim() to set the horizontal limits to be from 0 to 30.*
+
+```{r}
+hist(simulation, breaks = seq(0.5,30.5, by = 1), xlim = c(0,30), xlab = "# of Calls", ylab = "Frequency", col = "pink", main = "Histogram of Titi Call Simulution")
+```
+
+## Question 7
+
+*How does your histogram compare to the shape of the probability mass function you plotted above?*
+
+The shape of the histogram does not follow a normal distribution as closely as the probability mass function. The histogram has two distinct peaks while the probability mass function has one peak around 14-15 calls.
+
+# Challenges
+
+(1) I struggled intially to understand the difference of when to use ppois versus dpois. I wrote notes at the top about what I did - I hope it makes sense!
+
+(2) I wasn't sure how to best format the histogram - I initially struggled to position the bars the way I did and am not sure if I did it correctly.
+
+(3) I'm still a little bit confused about what a Poisson distribution is. I was able to figure how to handle it by doing the modules for this coming week and reading through the textbooks but I'm still a little confused.
+
+(4) I don't know if using the barplot() function for question 6 was correct or not.
+
+(5) I don't know how to tell if the probability answers actually make sense in their contexts for those first few questions.
