@@ -88,7 +88,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#question-5" id="toc-question-5" class="nav-link" data-scroll-target="#question-5">Question 5</a></li>
   <li><a href="#question-6" id="toc-question-6" class="nav-link" data-scroll-target="#question-6">Question 6</a></li>
   <li><a href="#question-7" id="toc-question-7" class="nav-link" data-scroll-target="#question-7">Question 7</a></li>
-  <li><a href="#challenges" id="toc-challenges" class="nav-link" data-scroll-target="#challenges">Challenges</a></li>
+  <li><a href="#notes-1" id="toc-notes-1" class="nav-link" data-scroll-target="#notes-1">Notes</a>
+  <ul>
+  <li><a href="#what-you-learned-from-running-their-original-homework-code-that-helped-improve-your-own-code." id="toc-what-you-learned-from-running-their-original-homework-code-that-helped-improve-your-own-code." class="nav-link" data-scroll-target="#what-you-learned-from-running-their-original-homework-code-that-helped-improve-your-own-code.">1) What you learned from running their Original Homework Code that helped improve your own code.</a></li>
+  <li><a href="#what-you-did-in-your-own-code-that-might-help-to-improve-theirs." id="toc-what-you-did-in-your-own-code-that-might-help-to-improve-theirs." class="nav-link" data-scroll-target="#what-you-did-in-your-own-code-that-might-help-to-improve-theirs.">2) What you did in your own code that might help to improve theirs.</a></li>
+  <li><a href="#what-challenges-if-any-you-both-faced-in-your-code-that-could-not-be-helped-by-comparison." id="toc-what-challenges-if-any-you-both-faced-in-your-code-that-could-not-be-helped-by-comparison." class="nav-link" data-scroll-target="#what-challenges-if-any-you-both-faced-in-your-code-that-could-not-be-helped-by-comparison.">3) What challenges, if any, you both faced in your code that could not be helped by comparison.</a></li>
+  <li><a href="#whether-the-annotationcommenting-on-your-peers-original-homework-code-is-readable-and-interpretable-to-you-and-if-not-then-how-it-could-be-improved." id="toc-whether-the-annotationcommenting-on-your-peers-original-homework-code-is-readable-and-interpretable-to-you-and-if-not-then-how-it-could-be-improved." class="nav-link" data-scroll-target="#whether-the-annotationcommenting-on-your-peers-original-homework-code-is-readable-and-interpretable-to-you-and-if-not-then-how-it-could-be-improved.">4) Whether the annotation/commenting on your peer’s Original Homework Code is readable and interpretable to you, and if not then how it could be improved.</a></li>
+  </ul></li>
   </ul>
 </nav>
 </div>
@@ -143,7 +149,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </dd>
 <dt><strong>Commentary Notes</strong></dt>
 <dd>
-Submitted initially without peer commentary - instead I based my edits on things I noticed I could improve when commenting on my assigned peer’s code!
+<p>Submitted initially without peer commentary - instead I based my edits on things I noticed I could improve when commenting on my assigned peer’s code!</p>
 </dd>
 </dl>
 </section>
@@ -231,15 +237,25 @@ Submitted initially without peer commentary - instead I based my edits on things
 <p><em>How does your histogram compare to the shape of the probability mass function you plotted above?</em></p>
 <p>The shape of the histogram does not follow a normal distribution as closely as the probability mass function. The histogram has two distinct peaks while the probability mass function has one peak around 14-15 calls. Both shapes, however, do tail off at the upper and and lower extremes.</p>
 </section>
-<section id="challenges" class="level2">
-<h2 class="anchored" data-anchor-id="challenges">Challenges</h2>
-<ol type="1">
-<li><p>I struggled intially to understand the difference of when to use ppois versus dpois. I wrote notes at the top about what I did - I hope it makes sense!</p></li>
-<li><p>I wasn’t sure how to best format the histogram - I initially struggled to position the bars the way I did and am not sure if I did it correctly.</p></li>
-<li><p>I’m still a little bit confused about what a Poisson distribution is. I was able to figure how to handle it by doing the modules for this coming week and reading through the textbooks but I’m still a little confused.</p></li>
-<li><p>I don’t know if using the barplot() function for question 6 was correct or not.</p></li>
-<li><p>I don’t know how to tell if the probability answers actually make sense in their contexts for those first few questions.</p></li>
-</ol>
+<section id="notes-1" class="level2">
+<h2 class="anchored" data-anchor-id="notes-1">Notes</h2>
+<p>Final Push: Febuary 10, 2025 5:01 pm Push to add this note: March 27, 2025 7:12 pm</p>
+<section id="what-you-learned-from-running-their-original-homework-code-that-helped-improve-your-own-code." class="level3">
+<h3 class="anchored" data-anchor-id="what-you-learned-from-running-their-original-homework-code-that-helped-improve-your-own-code.">1) What you learned from running their Original Homework Code that helped improve your own code.</h3>
+<p>For finding the probability of hearing 8 or more calls I realized I did 1 - ppois(7,15) instead of 1 - ppois(8,15) - reading Carly’s code made me realize I had mad this mistake and helped me understand how to work with the ppois (and other poisson functions) better. Also I realized by looking at Carly’s code that I plotted frequencies of calls instead of the probability mass function. I don’t know if I would have caught this mistake without seeing Carly’s work!</p>
+</section>
+<section id="what-you-did-in-your-own-code-that-might-help-to-improve-theirs." class="level3">
+<h3 class="anchored" data-anchor-id="what-you-did-in-your-own-code-that-might-help-to-improve-theirs.">2) What you did in your own code that might help to improve theirs.</h3>
+<p>I think many of my suggestions to Carly were to condense her code and omit some slightly redundant details. For example, I didn’t use a separate line to define lambda for those first few questions, I did so within the functions. Also, I think I gave some good organizational tips like adding a table of contents and numbering her questions.</p>
+</section>
+<section id="what-challenges-if-any-you-both-faced-in-your-code-that-could-not-be-helped-by-comparison." class="level3">
+<h3 class="anchored" data-anchor-id="what-challenges-if-any-you-both-faced-in-your-code-that-could-not-be-helped-by-comparison.">3) What challenges, if any, you both faced in your code that could not be helped by comparison.</h3>
+<p>I think Carly and I both initially struggled to find the right way to include an image in our work. It was hard to initially figure out that I should download the image and make a path within the repo, but now it seems more obvious.</p>
+</section>
+<section id="whether-the-annotationcommenting-on-your-peers-original-homework-code-is-readable-and-interpretable-to-you-and-if-not-then-how-it-could-be-improved." class="level3">
+<h3 class="anchored" data-anchor-id="whether-the-annotationcommenting-on-your-peers-original-homework-code-is-readable-and-interpretable-to-you-and-if-not-then-how-it-could-be-improved.">4) Whether the annotation/commenting on your peer’s Original Homework Code is readable and interpretable to you, and if not then how it could be improved.</h3>
+<p>I thought Carly’s annotation was pretty readable! I think some of it might be a little long. Shortening the annotations might make it a little more readable when returning to review the code later.</p>
+</section>
 </section>
 
 </main>
